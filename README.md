@@ -5,8 +5,8 @@
 # gitbook入门
 参见[GitBook 简明教程](https://www.chengweiyang.cn/gitbook/index.html)。
 
-# 如何启动本书
-执行命令后，你就可以在你的浏览器访问`localhost:4000`来阅读此书。
+# 本地启动本书
+执行下述命令后，你就可以在浏览器访问`localhost:4000`阅读此书内容。
 ```shell
 cd CPython-Internals
 gitbook serve
