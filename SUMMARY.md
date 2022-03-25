@@ -16,7 +16,7 @@
 * [配置和输入](configuration-and-input/README.md)
 * [语法树解析](syntax-tree/README.md)
 * [编译器](compiler/README.md)
-* [解析循环](evalutaion-loop/README.md)
+* [求值循环](evalutaion-loop/README.md)
 * [内存管理](memory-management/README.md)
 * [并行和并发](parall-concur/README.md)
 * [对象和类型](objects-types/README.md)

@@ -2,15 +2,15 @@
 description: CPython 如何解析并执行 Code Object。
 ---
 
-# 解析循环
+# 求值循环
 
 到本章为止，你可能已经了解了如何将 Python 代码解析为抽象语法树并将其编译成 code objects，这些 code objects 包含了由字节码构成的一系列操作。但想要真正的执行 code objects 还缺少一样关键的东西！那就是输入。在 Python 中，输入可能以局部变量或全局变量的形式出现。在本章中，你将会接触到一个名叫 `Value Stack` 的概念，code object 中的字节码将创建、修改和使用 `Value Stack` 中的变量。
 
-CPython 中执行代码的动作发生在一个核心循环中，又称为 “解析循环”。CPython 解释器将在这解析并执行由 `.pyc` 文件或由编译器得到的 code object：
+CPython 中执行代码的动作发生在一个核心循环中，又称为 “求值循环”。CPython 解释器将在这解析并执行由 `.pyc` 文件或由编译器得到的 code object：
 
 ![The Evaluation Loop](../.gitbook/assets/1648193091899.png)
 
-在解析循环中，每一个字节码指令都是基于系统的 “**栈帧**” 获取和执行的。
+在求值循环中，每一个字节码指令都是基于系统的 “**栈帧**” 获取和执行的。
 
 {% hint style="info" %}
 **Note**
@@ -39,12 +39,12 @@ Traceback (most recent call last):
 
 | File               | 功能          |
 | ------------------ | ----------- |
-| Python/ceval.c     | 实现解析循环的核心代码 |
+| Python/ceval.c     | 实现求值循环的核心代码 |
 | Python/ceval-gil.c | GIL的定义和控制算法 |
 
 ### 需要关注的内容
 
-* 解析循环将会获取一个 **code object** 并将其转换为一系列的 **frame object**；
+* 求值循环将会获取一个 **code object** 并将其转换为一系列的 **frame object**；
 * 解释器至少需要一个**线程**；
 * 每个线程都有自己的**线程状态**；
 * 在栈中执行 **frame objects**，又被称为栈帧；
