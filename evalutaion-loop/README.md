@@ -34,3 +34,18 @@ Traceback (most recent call last):
 当探索 CPython 编译器时，你已经理解了 [run\_eval\_code\_obj()](https://github.com/python/cpython/blob/v3.9.0b1/Python/pythonrun.c#L1155) 调用之前的内容。在本章，你将会进一步探索解释器相关的 API：
 
 ![run\_eval\_code](../.gitbook/assets/1648193961443.png)
+
+### 相关的源文件
+
+| File               | 功能          |
+| ------------------ | ----------- |
+| Python/ceval.c     | 实现解析循环的核心代码 |
+| Python/ceval-gil.c | GIL的定义和控制算法 |
+
+### 需要关注的内容
+
+* 解析循环将会获取一个 **code object** 并将其转换为一系列的 **frame object**；
+* 解释器至少需要一个**线程**；
+* 每个线程都有自己的**线程状态**；
+* 在栈中执行 **frame objects**，又被称为栈帧；
+* 变量的引用存放在 **value stack** 中。
