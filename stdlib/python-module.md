@@ -15,7 +15,7 @@
 (0.0, 127.5, -1.007905138339921)
 ```
 
-在`Lib/colorsys.py`中我们可以看到`rgb_to_hls()`的源码：
+在 `Lib/colorsys.py` 中我们可以看到 `rgb_to_hls()` 的源码：
 
 ```python
 # HLS: Hue, Luminance, Saturation
