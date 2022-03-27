@@ -14,7 +14,7 @@
 4. 每个参数被送往 `file`
 5. 一个换行符 `\n` 被送往 `file`
 
-[`Python/bltinmodule.c` 第 1828 行](https://github.com/python/cpython/blob/97fe9cfd9f81fe96a70e1ce80fce04b0c937bfac/Python/bltinmodule.c#L1828):
+[`Python/bltinmodule.c` 第 1828 行](https://github.com/python/cpython/blob/v3.9.0b1/Python/bltinmodule.c#L1828):
 ```c
 static PyObject *
 builtin_print(PyObject *self, PyObject *const *args,
