@@ -21,6 +21,8 @@
 * [并行和并发](parall-concur/README.md)
 * [对象和类型](objects-types/README.md)
 * [标准库](stdlib/README.md)
+    * [Python模块](stdlib/python-module.md)
+    * [Python和C模块](stdlib/python-and-c-module.md)
 * [测试套](test-suites/README.md)
 * [调试](debugging/README.md)
 * [基准测试,性能分析,追踪](performance-analysis/README.md)
