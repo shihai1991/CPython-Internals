@@ -13,6 +13,12 @@
     * [总结](DE/conclusion.md)
 * [编译CPython](compiling-CPython/README.md)
 * [Python语言和语法](language-and-grammar/README.md)
+    * [为什么CPython是用C语言而不是用Python语言来实现](language-and-grammar/why-cpython-is-written-in-c.md)
+    * [Python语言定义](language-and-grammar/python-language-specification.md)
+    * [使用解析器生成器](language-and-grammar/using-the-parser-generator.md)
+    * [重新生成语法](language-and-grammar/regen-grammar.md)
+    * [一个更复杂的案例](language-and-grammar/a-example.md)
+    * [总结](language-and-grammar/conclusion.md)
 * [配置和输入](configuration-and-input/README.md)
 * [语法树解析](syntax-tree/README.md)
 * [编译器](compiler/README.md)
@@ -28,4 +34,3 @@
 * [基准测试,性能分析,追踪](performance-analysis/README.md)
 * [总结](conclusion/README.md)
 * [附录](appendix/README.md)
-
