@@ -28,7 +28,7 @@
 * [十二、对象和类型](objects-types/README.md)
 * [十三、标准库](stdlib/README.md)
   * [Python模块](stdlib/python-module.md)
-  * [Python和C模块](stdlib/python-and-c-module.md)
+  * [Python 和 C 模块](stdlib/python-and-c-module.md)
 * [十四、测试套](test-suites/README.md)
 * [十五、调试](debugging/README.md)
 * [十六、基准测试,性能分析,追踪](performance-analysis/README.md)
