@@ -2,13 +2,13 @@
 description: CPython 如何解析并执行 Code Object。
 ---
 
-# 求值循环
+# 九、The Evaluation Loop
 
 到本章为止，你可能已经了解了如何将 Python 代码解析为抽象语法树并将其编译成 code objects，这些 code objects 包含了以字节码形式表示的一系列操作。但想要真正的执行 code objects 还缺少一样关键的东西！那就是输入。在 Python 中，输入可能以局部变量或全局变量的形式出现。在本章中，你将会接触到一个名叫 `Value Stack` 的概念，code object 中的字节码将创建、修改和使用 `Value Stack` 中的变量。
 
 CPython 中执行代码的动作发生在一个核心循环中，又称为 “求值循环”。CPython 解释器将在这解析并执行由序列化的 `.pyc` 文件或由编译器得到的 code object：
 
-![The Evaluation Loop](../.gitbook/assets/1648193091899.png)
+![图9.1 The Evaluation Loop](<../.gitbook/assets/图9.1 The Evaluation Loop.png>)
 
 在求值循环中，每一个字节码指令都是基于系统的 “[栈帧](http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch10s07.html)” 获取和执行的。
 
@@ -33,7 +33,7 @@ Traceback (most recent call last):
 
 当探索 CPython 编译器时，你已经理解了 [run\_eval\_code\_obj()](https://github.com/python/cpython/blob/v3.9.0b1/Python/pythonrun.c#L1155) 调用之前的内容。在本章，你将会进一步探索解释器相关的 API：
 
-![run\_eval\_code](../.gitbook/assets/1648193961443.png)
+![图9.2 run\_eval\_code](<../.gitbook/assets/图9.2 run\_eval\_code.png>)
 
 ### 相关的源文件
 
