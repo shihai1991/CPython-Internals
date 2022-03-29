@@ -40,7 +40,7 @@ Traceback (most recent call last):
 | File               | 功能          |
 | ------------------ | ----------- |
 | Python/ceval.c     | 实现求值循环的核心代码 |
-| Python/ceval-gil.c | GIL的定义和控制算法 |
+| Python/ceval-gil.h | GIL的定义和控制算法 |
 
 ### 需要关注的内容
 
