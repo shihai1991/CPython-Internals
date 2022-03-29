@@ -6,7 +6,7 @@ description: CPython 如何解析并执行 Code Object。
 
 到本章为止，你可能已经了解了如何将 Python 代码解析为抽象语法树并将其编译成 code objects，这些 code objects 包含了由字节码构成的一系列操作。但想要真正的执行 code objects 还缺少一样关键的东西！那就是输入。在 Python 中，输入可能以局部变量或全局变量的形式出现。在本章中，你将会接触到一个名叫 `Value Stack` 的概念，code object 中的字节码将创建、修改和使用 `Value Stack` 中的变量。
 
-CPython 中执行代码的动作发生在一个核心循环中，又称为 “求值循环”。CPython 解释器将在这解析并执行由 `.pyc` 文件或由编译器得到的 code object：
+CPython 中执行代码的动作发生在一个核心循环中，又称为 “求值循环”。CPython 解释器将在这解析并执行由序列化的 `.pyc` 文件或由编译器得到的 code object：
 
 ![The Evaluation Loop](../.gitbook/assets/1648193091899.png)
 
