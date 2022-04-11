@@ -15,7 +15,7 @@
   * [在 macOS 上编译 CPython](compiling-cpython/compiling-on-macOS.md)
   * [在 Linux 上编译 CPython](compiling-cpython/compiling-on-linux.md)
   * [安装自定义版本](compiling-cpython/install-custom-version.md)
-  * [编译命令快速入门](compiling-cpython/quick-prime-on-make.md)
+  * [编译命令快速入门](compiling-cpython/quick-primer-on-make.md)
   * [CPython 的编译选项](compiling-cpython/make-targets.md)
   * [在 Windows 上编译 CPython](compiling-cpython/compiling-on-windows.md)
   * [配置文件引导优化](compiling-cpython/PGO.md)
