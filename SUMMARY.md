@@ -24,6 +24,8 @@
 * [八、编译器](compiler/README.md)
 * [九、求值循环](evalutaion-loop/README.md)
 * [十、内存管理](memory-management/README.md)
+  * [C 中的内存分配](memory-management/c-zhong-de-nei-cun-fen-pei.md)
+  * [Python 内存管理系统设计](memory-management/python-nei-cun-guan-li-xi-tong-she-ji.md)
   * [C 语言中的内存分配](memory-management/memory-allocation-in-c.md)
   * [Python 内存管理系统设计](memory-management/design-of-the-python-memory-management-system.md)
 * [十一、并行和并发](parall-concur/README.md)
