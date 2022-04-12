@@ -37,9 +37,9 @@ https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install openssl xz zlib gdbm sqlite
 ```
 
-现在你已经安装了依赖项，接下来可以运行配置脚本了。Homebrew 的命令 `brew --prefix [package]` 能返回指定包的安装目录。你通过编译 Homebrew 安装的包目录来启用对 SSL 的支持。
+现在你已经安装了依赖项，接下来可以运行配置脚本了。Homebrew 的命令 `brew --prefix [package]` 能返回指定包的安装目录。你可以在编译时通过使用 Homebrew 提供的路径来启用对 SSL 的支持。
 
-标志 `--with-pydebug` 是启用调试的钩子。若你出于开发或测试的目的需要进行调试，请添加此选项。调试 CPython 的内容将在调试一章中详细介绍。
+若你出于开发或测试的目的需要进行调试，请添加选项 `--with-pydebug`。调试 CPython 的内容将在调试一章中详细介绍。
 
 配置阶段只需要运行一次，请在运行配置命令时指定 zlib 包的位置：
 

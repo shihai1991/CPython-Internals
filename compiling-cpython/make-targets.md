@@ -1,2 +1,2 @@
-# CPython 的编译选项
+# CPython 的 make 目标
 

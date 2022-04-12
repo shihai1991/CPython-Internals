@@ -30,7 +30,7 @@ libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev \
 libdb5.3-dev libbz2-dev libexpat1-dev liblzma-dev libffi-dev
 ```
 
-安装了依赖项后，你可以运行配置脚本了，选项 `--with-pydebug` 能帮助启用调试钩子：
+安装了依赖项后，你可以运行 `configure` 脚本了，若构建调试版本请添加可选项 `--with-pydebug`：
 
 ```bash
 $ ./configure --with-pydebug
@@ -45,7 +45,7 @@ $ make -j2 -s
 {% hint style="info" %}
 **See Also**
 
-有关 `make` 选项的的详细介绍，请参考章节编译命令快速入门。
+有关 `make` 选项的的详细介绍，请参考章节 make 快速入门。
 {% endhint %}
 
 查看输出二进制文件中的 `_ssl` 模块是否有问题。 若有问题，请检查你的发行版以获取有关安装 OpenSSL 头文件的说明。
