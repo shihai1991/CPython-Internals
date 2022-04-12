@@ -1,3 +1,7 @@
+---
+description: Python 内存管理机制概述
+---
+
 # Python 内存管理系统设计
 
 由于 CPython 是基于 C 构建的，它也受到 C 中静态内存分配、自动内存分配和动态内存分配的约束。而 Python 语言的一些特性设计使得我们面临更多的挑战：
@@ -39,3 +43,11 @@ CPython 中使用了两种内存分配器：
 
 1. 操作系统层面的内存分配器 `malloc` ，主要用于原始域;
 2. CPython 层面的内存分配器 `pymalloc` ，主要用于对象和 PyMem 内存域。
+
+{% hint style="info" %}
+**Note**
+
+默认情况下，会将 CPython 的内存分配器`pymalloc`编译到 CPython 的可执行文件中。你可以通过将 pyconfig.h 中的`WITH_PYMALLOC`设置为 0，再重新编译 CPython 去禁用它。禁用之后，在为 PyMem 和对象域分配内存时将使用系统自带的内存分配 APIs。
+{% endhint %}
+
+如果你使用 debug 模式去编译 CPython （在 macOS/Linux 下添加 `--with-pydebug` 编译选项，或者在 Windows 下以 `Debug` 模式编译），则所有的内存分配函数都会切换到 Debug 模式下的实现。例如，如果你启用了 Debug 模式，当触发内存分配时调用的将会是 `_PyMem_DebugAlloc()` 而不是`_PyMem_Alloc()` 。
