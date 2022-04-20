@@ -23,6 +23,8 @@
 * [七、语法树解析](syntax-tree/README.md)
 * [八、编译器](compiler/README.md)
 * [九、求值循环](evalutaion-loop/README.md)
+  * [9.1 构建线程状态](evalutaion-loop/9.1-constructing-thread-state.md)
+  * [9.2 构建帧对象](evalutaion-loop/9.2-constructing-frame-objects.md)
 * [十、内存管理](memory-management/README.md)
 * [十一、并行和并发](parall-concur/README.md)
 * [十二、对象和类型](objects-types/README.md)
