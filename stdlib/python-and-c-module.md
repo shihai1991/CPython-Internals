@@ -1,4 +1,4 @@
-# Python 和 C 模块
+# 13.2 Python 和 C 模块
 
 其余模块是用 C，或者是 Python 和 C 组合编写的。这些模块源代码的 Python 部分在 Lib 文件夹中，C 的部分在 Modules 文件夹中。不过有两个例外，`sys` 模块在 `Python/sysmodule.c` 中，`__builtins__` 模块在 `Python/bltinmodule.c` 中。
 
@@ -12,7 +12,7 @@
 2. 这个 `PyUnicodeObject` 作为参数传入 `builtin_print()`，`builtin_print` 的 `kwnames` 为 `NULL`
 3. 变量 `file` 被设置成 `PyId_stdout`，也即系统的 `stdout`
 4. 每个参数被送往 `file`
-5. 一个换行符 `\n` 被送往 `file`
+5. 一个换行符  被送往 `file`
 
 [`Python/bltinmodule.c` 第 1828 行](https://github.com/python/cpython/blob/v3.9.0b1/Python/bltinmodule.c#L1828):
 
