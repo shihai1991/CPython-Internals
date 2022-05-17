@@ -12,7 +12,7 @@
 2. 这个 `PyUnicodeObject` 作为参数传入 `builtin_print()`，`builtin_print` 的 `kwnames` 为 `NULL`
 3. 变量 `file` 被设置成 `PyId_stdout`，也即系统的 `stdout`
 4. 每个参数被送往 `file`
-5. 一个换行符  被送往 `file`
+5. 一个换行符 `\n` 被送往 `file`
 
 [`Python/bltinmodule.c` 第 1828 行](https://github.com/python/cpython/blob/v3.9.0b1/Python/bltinmodule.c#L1828):
 
