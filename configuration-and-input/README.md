@@ -8,18 +8,18 @@
 2. 通过 `python -m` 命令加一个模块名称来运行；
 3. 通过 `python [file]` 运行，其中 `[file]` 为文件的具体路径，并且文件中包含 Python 代码；
 4. 通过标准输入将 Python 代码通过管道传输到可执行文件中，例如 `cat [file] | python`；
-5. 通过启动REPL，一次执行一个命令；
+5. 通过启动REPL（Read Eval Print Loop:交互式解释器），一次执行一个命令；
 6. 使用 C API，并用 Python 作为嵌入式环境。
 
 {% hint style="info" %}
 **See Also**
 
-Python 有这么多执行脚本的方法，信息量比较大可能一时难以消化。如果你想要学习更多的细节，可以参考 Darren Jones [在realpython.com上整理的一个关于运行Python脚本的很棒的课程](https://realpython.com/courses/running-python-scripts/)。
+Python 有这么多执行脚本的方法，信息量比较大可能一时难以消化。如果你想要学习更多的细节，可以参考 Darren Jones [在 realpython.com 上整理的一个关于运行 Python 脚本的很棒的课程](https://realpython.com/courses/running-python-scripts/)。
 {% endhint %}
 
-在执行任何的python代码之前，解释器需要如下几个信息 ：
+在执行任何的 python 代码之前，解释器都需要：
 
-- 一个需要执行的模块
+- 一个待执行的模块
 - 保存变量等信息的状态
 - 配置，例如开启了哪些选项
 
@@ -30,7 +30,7 @@ Python 有这么多执行脚本的方法，信息量比较大可能一时难以�
 {% hint style="info" %}
 **Note**
 
-与 Python 代码的 [PEP8](https://realpython.com/courses/writing-beautiful-python-code-pep-8/) 编码风格类似，CPython 中 C 代码的编码风格叫做 [PEP7](https://peps.python.org/pep-0007/)。以下是一些针对 C 源码的命名标准：
+与 Python 的编码规范 [PEP8](https://realpython.com/courses/writing-beautiful-python-code-pep-8/) 类似，CPython 中 C 代码的编码规范叫做 [PEP7](https://peps.python.org/pep-0007/)。以下是一些针对 C 源码的命名标准：
 
 - 公共函数使用 `Py` 前缀，静态函数不使用 `Py` 前缀。`Py_` 前缀是为全局服务例行程序保留的，如 `Py_FatalError`。特定的例行程序组（如特定对象类型的API）使用更长的前缀，例如字符串函数会使用 `PyString_` 前缀。
 - 公共函数和变量的命名规则是大小写混合并带有下划线，例如：`PyObject_GetAttr()`、`Py_BuildValue()`、`PyExc_TypeError()` 。
