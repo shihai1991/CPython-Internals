@@ -1,4 +1,4 @@
-# Python 和 C 模块
+# 13.2 Python 和 C 模块
 
 其余模块是用 C，或者是 Python 和 C 组合编写的。这些模块源代码的 Python 部分在 Lib 文件夹中，C 的部分在 Modules 文件夹中。不过有两个例外，`sys` 模块在 `Python/sysmodule.c` 中，`__builtins__` 模块在 `Python/bltinmodule.c` 中。
 
