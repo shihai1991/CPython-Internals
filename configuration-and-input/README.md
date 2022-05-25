@@ -32,12 +32,12 @@ Python 有这么多执行脚本的方法，信息量比较大可能一时难以�
 
 与 Python 的编码规范 [PEP8](https://realpython.com/courses/writing-beautiful-python-code-pep-8/) 类似，CPython 中 C 代码的编码规范叫做 [PEP7](https://peps.python.org/pep-0007/)。以下是一些针对 C 源码的命名标准：
 
-- 公共函数使用 `Py` 前缀，静态函数不使用 `Py` 前缀。`Py_` 前缀是为全局服务例行程序保留的，如 `Py_FatalError`。特定的例行程序组（如特定对象类型的API）使用更长的前缀，例如字符串函数会使用 `PyString_` 前缀。
+- 公共函数使用 `Py` 前缀，静态函数不使用 `Py` 前缀。`Py_` 前缀是为全局服务例行程序保留的，如 `Py_FatalError`。特定的例行程序组（如特定对象类型的 API）使用更长的前缀，例如字符串函数会使用 `PyString_` 前缀。
 - 公共函数和变量的命名规则是大小写混合并带有下划线，例如：`PyObject_GetAttr()`、`Py_BuildValue()`、`PyExc_TypeError()` 。
 - 有些情况下，“内部”函数必须对加载器是可视的，可以使用 `_Py` 作为前缀，例如`_PyObject_Dump()`。
 - 宏的前缀应是大小写混合的，之后的部分全部使用大写字母，例如`PyString_AS_STRING`，`Py_PRINT_RAW `。
 
-与 PEP8 不同的是，用于检查 PEP7 合规性的工具很少。因此这部分合规性的检查任务就需要通过核心开发者参与到代码检视中来完成。与其他任何人工操作的流程一样，代码也不会是完美的，总会有不符合 PEP7 规则的地方。
+与 PEP8 不同的是，用于检查代码规则是否符合 PEP7 的工具很少。因此这部分合规性的检查任务就需要通过核心开发者参与到代码检视中来完成。与其他任何人工操作的流程一样，代码也不会是完美的，总会有不符合 PEP7 规则的地方。
 
 唯一用来检查 PEP7 合规性的工具是一个名为 `smelly.py` 的脚本，您可以在 Linux 或 macOS 上通过 `make smelly` 执行，或通过以下命令行执行：
 
