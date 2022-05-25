@@ -39,7 +39,7 @@ Python 有这么多执行脚本的方法，信息量比较大可能一时难以�
 
 与 PEP8 不同的是，用于检查代码规则是否符合 PEP7 的工具很少。因此这部分合规性的检查任务就需要通过核心开发者参与到代码检视中来完成。与其他任何人工操作的流程一样，代码也不会是完美的，总会有不符合 PEP7 规则的地方。
 
-唯一用来检查 PEP7 合规性的工具是一个名为 `smelly.py` 的脚本，您可以在 Linux 或 macOS 上通过 `make smelly` 执行，或通过以下命令行执行：
+唯一用来检查 PEP7 合规性的工具是一个名为 `smelly.py` 的脚本，你可以在 Linux 或 macOS 上通过 `make smelly` 执行，或通过以下命令行执行：
 
 ```bash
 $ ./python Tools/scripts/smelly.py
