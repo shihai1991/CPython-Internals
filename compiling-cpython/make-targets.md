@@ -37,8 +37,8 @@ CPython 的 Makefile 中内置了许多有用的 make 目标：
 | pycremoval      | 删除 pyc 文件                                       |
 | docclean        | 删除 Doc/ 中的构建文档                                |
 | profile-removal | 删除所有优化配置文件                                   |
-| clobber         | 与 `clean` 相同，但也会删除库、标签、配置和 build 目录    |
-| distclean       | 与 `clobber` 相同，但也会删除从源生成的任何内容，例如 Makefile |
+| clobber         | 与 `clean` 相同，但同时会删除库、标签、配置和 build 目录    |
+| distclean       | 与 `clobber` 相同，但同时会删除从源生成的任何内容，例如 Makefile |
 
 ### 4.5.4 安装目标
 
