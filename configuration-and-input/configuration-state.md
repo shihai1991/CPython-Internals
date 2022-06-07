@@ -1,5 +1,3 @@
-配置状态
-
 在执行任何 Python 代码之前，CPython 首先会建立运行时及用户选项的配置。
 运行时的配置存在于以下三个数据结构中，数据结构在 [PEP587](https://peps.python.org/pep-0587/) 中定义：
 
@@ -101,4 +99,3 @@ dev_mode=True, utf8_mode=0)
 >>> sys._xoptions
 {'dev': True}
 ```
-
