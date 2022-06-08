@@ -1,4 +1,4 @@
-#配置状态
+# 配置状态
 
 在执行 Python 代码之前，CPython 首先会对运行时及用户选项进行配置。
 运行时的配置存在于以下三个数据结构中，数据结构在 [PEP587](https://peps.python.org/pep-0587/) 中定义：
@@ -61,7 +61,7 @@ CPython 运行时使用配置数据来启用和禁用某项功能。
 ## 通过命令行设置运行时配置
 
 Python 还附带了几个[命令行接口选项](https://docs.python.org/3/using/cmdline.html)。
-例如，Cpython 有个名为 **verbose** 的模式，这个模式主要面向开发者，用于调试 CPython。
+例如，CPython 有个名为 **verbose** 的模式，这个模式主要面向开发者，用于调试 CPython。
 在 Python 中可以通过 `-v` 标志启用 verbose 模式，在这种模式下，模块被加载时会有信息打印在屏幕上：
 
 ```bash
@@ -87,7 +87,7 @@ import zipimport # builtin
 
 ## 查看运行时配置
 
-CPython 解释器有一组运行时标志，这些标志是用于切换 CPython 特定行为的高级功能。 在 Python 会话中，您可以使用名为 `sys.flags` 的 tuple 访问运行时标志，例如 verbose 模式和 quiet 模式。所有通过 `-X` 指定的标志都会在 `sys._xoptions` 字典中生效：
+CPython 解释器有一组运行时标志，这些标志是用于切换 CPython 特定行为的高级功能。 在 Python 会话中，你可以使用名为 `sys.flags` 的 tuple 访问运行时标志，例如 verbose 模式和 quiet 模式。所有通过 `-X` 指定的标志都会在 `sys._xoptions` 字典中生效：
 
 ```bash
 $ ./python -X dev -q
