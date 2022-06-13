@@ -20,7 +20,7 @@
 | ------------------ | ------------------------------------------------------------ |
 | Lib/runpy.py       | 标准库模块，用于导入 Python 模块并执行                       |
 | Modules/main.c     | 为外部代码执行进行函数包装，外部代码来源例如文件、模块或输入流 |
-| Programs/python.c  | python 可执行文件的入口，适用于Windows，Linux和 macOS 系统，仅用作 Modules/main.c 的装饰器 |
+| Programs/python.c  | python 可执行文件的入口，适用于 Windows，Linux 和 macOS 系统，仅用作 Modules/main.c 的装饰器 |
 | Python/pythonrun.c | 对内部 C API 进行函数包装以处理来自命令行的输入              |
 
 
@@ -39,12 +39,12 @@ $ ./python -c "print(2 ** 2)"
 4
 ```
 
-命令行中通过 `-c` 参数传入的内容会被传递给Modules/main.c 文件中 [pymain_run_command()](https://github.com/python/cpython/blob/v3.9.0b1/Modules/main.c#L226) 函数的 `wchar_t*` 类型的参数。
+命令行中通过 `-c` 参数传入的内容会被传递给 Modules/main.c 文件中 [pymain_run_command()](https://github.com/python/cpython/blob/v3.9.0b1/Modules/main.c#L226) 函数的 `wchar_t*` 类型的参数。
 
 {% hint style="info" %}
 **Note**
 
-`wchar_t* ` 类型通常被用作低级存储类型，以便跨 CPython 的 Unicode 数据因为这种类型的大小可以存储UTF8字符。
+`wchar_t* ` 类型通常作为 CPython 中 Unicode 数据的低级存储类型，因为这种类型的大小可以存储 UTF8 字符。
 
 将 `wchar_t` 类型转换成 Python 字符串时，Objects/unicodeobject.c 文件中有一个辅助函数叫做 [PyUnicode_FromWideChar()](https://github.com/python/cpython/blob/v3.9.0b1/Objects/unicodeobject.c#L2183) 会返回Unicode字符串，之后由 `PyUnicode_AsUTF8String()` 完成 UTF8 编码。
 Python 的 Unicode 字符串在《Unicode 字符串类型》章节和《对象与类型》章节有深入的介绍。
@@ -58,7 +58,7 @@ Python 的 Unicode 字符串在《Unicode 字符串类型》章节和《对象�
 {% hint style="info" %}
 **Note**
 
-Python 模块是用于将解析后的代码交给编译器的数据结构。Python 模块的 C 数据结构名为 `mod_ty`，在Include/Python-ast.h 文件中定义
+Python 模块是用于将解析后的代码交给编译器的数据结构。Python 模块的 C 数据结构名为 `mod_ty`，在 Include/Python-ast.h 文件中定义
 
 {% endhint %}
 
@@ -112,7 +112,7 @@ CPython 导入一个标准库模块 `runpy` 并通过 [PyObject_Call()](https://
 
 ## 从编译好的字节码输入
 
-如果用户为python可执行程序传递了一个 `.pyc` 文件，那么 CPython 不会将文件作为纯文本文件加载并解析它，而是假定 `.pyc` 文件包含一个写入磁盘的 `code object`。
+如果用户为 python 可执行程序传递了一个 `.pyc` 文件，那么 CPython 不会将文件作为纯文本文件加载并解析它，而是假定 `.pyc` 文件包含一个写入磁盘的 `code object`。
 在 [PyRun_SimpleFileExFlags()](https://github.com/python/cpython/blob/v3.9.0b1/Python/pythonrun.c#L382) 中，有一个子句用于用户提供 `.pyc` 文件的文件路径。
 Python/pythonrun.c 文件中的 [run_pyc_file()](https://github.com/python/cpython/blob/v3.9.0b1/Python/pythonrun.c#L1205) 函数使用文件句柄从 `.pyc` 文件中 marshals `code object`，磁盘上的 `code object` 数据结构是 CPython 编译器缓存已编译的代码的方式，这样它就不需要在脚本每次被调用时都去解析一次。
 
