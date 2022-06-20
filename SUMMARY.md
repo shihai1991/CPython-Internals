@@ -40,7 +40,7 @@
   * [9.3 帧的执行](evalutaion-loop/9.3-frame-execution.md)
   * [9.4 值栈](evalutaion-loop/9.4-value-stack.md)
   * [9.5 例子：在列表中添加元素](evalutaion-loop/9.5-example-add-an-item-to-list.md)
-  * [9.6 结论](evalutaion-loop/9.6-conclusion.md)
+  * [9.6 总结](evalutaion-loop/9.6-conclusion.md)
 * [十、内存管理](memory-management/README.md)
 * [十一、并行和并发](parall-concur/README.md)
 * [十二、对象和类型](objects-types/README.md)
