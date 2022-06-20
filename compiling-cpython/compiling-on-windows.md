@@ -2,7 +2,7 @@
 
 有两种方法可以从 Windows 编译 CPython 二进制文件和库。
 
-第一种从命令行编译，这需要用到 Visual Studio 自带的 Microsoft Visual C++ 编译器。第二种是通过 Visual Studio 打开 `PCBuild pcbuild.sln` 直接进行构建。
+第一种从命令行编译，这需要用到 Visual Studio 自带的 Microsoft Visual C++ 编译器。第二种是通过 Visual Studio 打开 `PCBuild/pcbuild.sln` 直接进行构建。
 
 ### 安装依赖项
 
@@ -40,7 +40,7 @@ Finished.
 > build.bat -p x64 -c Debug
 ```
 
-此命令将生成 Python 二进制文件 `PCbuild -> amd64 -> python_-d.exe`。该二进制文件可以直接从命令行启动：
+此命令将生成 Python 二进制文件 `PCbuild/amd64/python_d.exe`。该二进制文件可以直接从命令行启动：
 
 ```
 > amd64\python_d.exe
@@ -59,7 +59,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 > build.bat -p x64 -c Release
 ```
 
-上述命令将生成二进制文件 `PCbuild -> amd64 -> python.exe`。
+上述命令将生成二进制文件 `PCbuild/amd64/python.exe`。
 
 {% hint style="info" %}
 后缀 `_d` 表明 CPython 是基于 `Debug` 配置构建的。
