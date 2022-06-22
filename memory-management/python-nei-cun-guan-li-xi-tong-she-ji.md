@@ -20,9 +20,9 @@ description: Python 内存管理机制概述
 
 Python 对象的内存是通过一个统一 API 自动分配得到的，并不需要 Python 开发者自己去分配内存。这种设计也意味着 CPython 的标准库和核心模块都要使用该 API 去分配内存。
 
-## 内存分配域
+## 内存分配作用域
 
-CPython 自带 3 种层次动态内存分配域：
+CPython 可以在 3 个层次的作用域上进行动态内存分配：
 
 1. 原始域：用于从系统的堆上分配内存，用于大块内存或非对象的内存分配；
 2. 对象域：用于所有 Python 对象的内存分配；
@@ -35,14 +35,14 @@ CPython 自带 3 种层次动态内存分配域：
 * `_Realloc(void *ptr, size_t new_size)` - 将指针指向的内存重新分配大小；
 * `_Free(void *ptr)` - 将指针指向的内存释放回堆中。
 
-枚举 `PyMemAllocatorDomain` 将 CPython 中的 3 个域分别表示为 `PYMEM_DOMAIN_RAW`, `PYMEM_DOMAIN_OBJ` 和`PYMEM_DOMAIN_MEM` 。
+枚举变量 `PyMemAllocatorDomain` 将 CPython 中的 3 个作用域分别表示为 `PYMEM_DOMAIN_RAW`, `PYMEM_DOMAIN_OBJ` 和`PYMEM_DOMAIN_MEM` 。
 
 ## 内存分配器
 
 CPython 中使用了两种内存分配器：
 
-1. 操作系统层面的内存分配器 `malloc` ，主要用于原始域;
-2. CPython 层面的内存分配器 `pymalloc` ，主要用于对象和 PyMem 内存域。
+1. 操作系统层面的内存分配器 `malloc` ，主要用于原始内存作用域;
+2. CPython 层面的内存分配器 `pymalloc` ，主要用于 PyMem 和对象内存作用域。
 
 {% hint style="info" %}
 **Note**
