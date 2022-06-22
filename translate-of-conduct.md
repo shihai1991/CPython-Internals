@@ -21,8 +21,8 @@
 
 ### 基础规范
 
-文章中的符号规范遵从 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) 。
-
+* 文章中的符号规范遵从 [中文文案排版指北](https://github.com/sparanoid/chinese-copywriting-guidelines) ；
+* 文章中的粗体或斜体字需要使用添加``进行突出说明。
 
 
 ### 有序列表和无序列表
