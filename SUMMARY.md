@@ -42,6 +42,8 @@
   * [9.5 例子：在列表中添加元素](evalutaion-loop/9.5-example-add-an-item-to-list.md)
   * [9.6 总结](evalutaion-loop/9.6-conclusion.md)
 * [十、内存管理](memory-management/README.md)
+  * [C 中的内存分配](memory-management/c-zhong-de-nei-cun-fen-pei.md)
+  * [Python 内存管理系统设计](memory-management/python-nei-cun-guan-li-xi-tong-she-ji.md)
 * [十一、并行和并发](parall-concur/README.md)
 * [十二、对象和类型](objects-types/README.md)
 * [十三、标准库](stdlib/README.md)
